@@ -11,6 +11,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <link rel="stylesheet" href="src/styles.css" />
 </head>
 
@@ -19,22 +20,24 @@
     <div class="weatherApp">
       <form id="cityForm">
         <div class="row">
-          <div class="col-9">
+          <div class="col-7">
             <input type="text" id="cityInfo" class="form-control shadow border-0" placeholder="Enter a city"></input>
           </div>
-          <div class="col-3">
+          <div class="col-4">
             <input type="submit" id="button" class="form-control btn btn-primary shadow" value="Search"></input>
+          </div>
+          <div class="col-4">
+            <input type="submit" id="current-button" class="form-control btn btn-success shadow"
+              value="Current"></input>
           </div>
         </div>
       </form>
       <div class="row">
         <div class="col-6">
           <h1 class="region">
-            Paris, France
           </h1>
           <ul id="date">
             <li>
-              Current Weather
             </li>
             <li>
               5:05 pm
@@ -48,29 +51,21 @@
               <span id="temperature">25</span>
               <span class="units">
                 <a href="#" id="celsius">°C </a>
-                <span id="separator">|</span>
-                <a href="#" id="fahrengeit"> F </a>
-              </span>
-              <div class="sky">
-                Sunny
-              </div>
+                <div class="sky" id="description">
+                  Sunny
+                </div>
             </div>
           </div>
         </div>
         <div class="col-4">
           Wind
           <br />
-          6 km/h
+          <span id="wind">6</span> km/h
         </div>
         <div class="col-4">
           Humidity
           <br />
-          50%
-        </div>
-        <div class="col-4">
-          Visibility
-          <br />
-          37km
+          <span id="humidity">50</span>%
         </div>
       </div>
       <br />
