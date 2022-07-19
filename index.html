@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="weatherApp">
+      <form id="cityForm">
+        <div class="row">
+          <div class="col-9">
+            <input type="text" id="cityInfo" class="form-control shadow border-0" placeholder="Enter a city"></input>
+          </div>
+          <div class="col-3">
+            <input type="submit" id="button" class="form-control btn btn-primary shadow" value="Search"></input>
+          </div>
+        </div>
+      </form>
+      <div class="row">
+        <div class="col-6">
+          <h1 class="region">
+            Paris, France
+          </h1>
+          <ul id="date">
+            <li>
+              Current Weather
+            </li>
+            <li>
+              5:05 pm
+            </li>
+          </ul>
+        </div>
+        <div class="col-6">
+          <div class="d-flex">
+            <img src="imgs/sun.png" alt="sun" class="weather-icon float-left" width="30" height="30" />
+            <div class="col2">
+              <span id="temperature">25</span>
+              <span class="units">
+                <a href="#" id="celsius">°C </a>
+                <span id="separator">|</span>
+                <a href="#" id="fahrengeit"> F </a>
+              </span>
+              <div class="sky">
+                Sunny
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          Wind
+          <br />
+          6 km/h
+        </div>
+        <div class="col-4">
+          Humidity
+          <br />
+          50%
+        </div>
+        <div class="col-4">
+          Visibility
+          <br />
+          37km
+        </div>
+      </div>
+      <br />
+      <h6>
+        5 DAY FORECAST📅
+      </h6>
+      <div class="row">
+        <div class="col">
+          <div class="card otherDays">
+            <h5>
+              Thursday
+            </h5>
+            <div class="d-flex">
+              <img src="imgs/cloud.png" alt="sun" class="weather-icon float-left" width="30" height="30" />
+              <div class="col4">
+                20°C
+                <br />
+                16°C
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card otherDays">
+            <h5>
+              Friday
+            </h5>
+            <div class="d-flex">
+              <img src="imgs/sun.png" alt="sun" class="weather-icon float-left" width="30" height="30" />
+              <div class="col4">
+                26°C
+                <br />
+                21°C
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card otherDays">
+            <h5>
+              Saturday
+            </h5>
+            <div class="d-flex">
+              <img src="imgs/suncloud.png" alt="suncloud" class="weather-icon float-left" width="30" height="30" />
+              <div class="col4">
+                21°C
+                <br />
+                18°C
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card otherDays">
+            <h5>
+              Sunday
+            </h5>
+            <div class="d-flex">
+              <img src="imgs/rain.png" alt="rain" class="weather-icon float-left" width="30" height="30" />
+              <div class="col4">
+                22°C
+                <br />
+                17°C
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card otherDays">
+            <h5>
+              Monday
+            </h5>
+            <div class="d-flex">
+              <img src="imgs/sun.png" alt="sun" class="weather-icon float-left" width="30" height="30" />
+              <div class="col4">
+                24°C
+                <br />
+                20°C
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>Coded by Anna Lix</footer>
+    </div>
+  </div>
+  <script src="src/index.js"></script>
+</body>
+
+</html>

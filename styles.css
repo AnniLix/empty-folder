@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  background: linear-gradient(
+    0deg,
+    rgb(247, 247, 247) 23.8%,
+    rgb(252, 221, 221) 92%
+  );
+}
+
+h1 {
+  font-size: 25px;
+  margin: 10px 0;
+  color: #fa5981;
+}
+
+ul {
+  padding: 0%;
+  font-size: 14px;
+  font-weight: bold;
+  list-style-type: none;
+}
+
+.units,
+a {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+h5 {
+  text-align: center;
+  color: #fc658b;
+}
+
+h6,
+col {
+  margin: 0;
+}
+
+.sky {
+  font-size: 20px;
+}
+
+.d-flex {
+  padding-top: 5px;
+}
+
+.col {
+  margin-top: 20px;
+}
+
+.col2 {
+  font-size: 33px;
+  font-weight: 500;
+  color: #fc658b;
+}
+
+.col-4 {
+  text-align: center;
+  color: #fd4573;
+  padding: 0;
+  max-width: 90px;
+  margin: 0 15px;
+}
+
+.col-4:hover {
+  background: #ffecf1;
+  transition: all 200ms ease-in-out;
+}
+
+.col-6 {
+  margin-top: 10px;
+  padding-left: 15px;
+}
+
+.weatherApp {
+  display: block;
+  margin: 20px 340px;
+  padding: 20px;
+  border: 2px solid#FF85A3;
+  background: white;
+  max-width: 700px;
+  border-radius: 5px;
+}
+
+.weather-icon {
+  height: 40px;
+  width: 40px;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 25px;
+}
