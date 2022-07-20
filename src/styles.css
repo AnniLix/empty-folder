@@ -37,6 +37,12 @@ col {
   margin: 0;
 }
 
+.small,
+small {
+  text-align: center;
+  margin-left: 339px;
+}
+
 .sky {
   font-size: 20px;
 }
@@ -55,19 +61,24 @@ col {
   color: #fc658b;
 }
 
-.col-4 {
+.col-3 {
   text-align: center;
   color: #fd4573;
   padding: 0;
   max-width: 90px;
-  margin: 0 15px;
+  margin: 0 5px;
 }
 
-.col-4:hover {
+.col-3:hover {
   background: #ffecf1;
   transition: all 200ms ease-in-out;
 }
 
+.col-4 {
+  max-width: 90px;
+  margin: 0 5px;
+  padding: 0;
+}
 .col-6 {
   margin-top: 10px;
   padding-left: 15px;
@@ -87,6 +98,11 @@ col {
   height: 40px;
   width: 40px;
   margin-top: 10px;
+}
+
+.source {
+  color: #007bff;
+  font-size: 14px;
 }
 
 footer {
