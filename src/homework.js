@@ -30,12 +30,19 @@ function showWeather(response) {
   document.querySelector('#temperature').innerHTML = Math.round(
     response.data.main.temp
   );
+  celsiusTemp = response.data.main.temp;
   document.querySelector('#humidity').innerHTML = response.data.main.humidity;
   document.querySelector('#wind').innerHTML = Math.round(
     response.data.wind.speed
   );
   document.querySelector('#description').innerHTML =
     response.data.weather[0].main;
+  document
+    .querySelector('#icon')
+    .setAttribute(
+      'src',
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 }
 
 function handleSubmit(event) {
@@ -64,12 +71,38 @@ function myPosition(position) {
   axios.get(apiGeolocation).then(showWeather);
 }
 
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  celsiusElement.classList.add('active');
+  fahrenheitElement.classList.remove('active');
+  let celsius = document.querySelector('#temperature');
+  celsius.innerHTML = Math.round(celsiusTemp);
+}
+
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  celsiusElement.classList.remove('active');
+  fahrenheitElement.classList.add('active');
+
+  let temperatureElement = document.querySelector('#temperature');
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
 function current(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(myPosition);
 }
 
+let celsiusTemp = null;
+
 let currentPosition = document.querySelector('#current-button');
 currentPosition.addEventListener('click', current);
+
+let celsiusElement = document.querySelector('#celsius');
+celsiusElement.addEventListener('click', displayCelsiusTemp);
+
+let fahrenheitElement = document.querySelector('#fahrenheit');
+fahrenheitElement.addEventListener('click', displayFahrenheitTemp);
 
 searchCity('Paris');

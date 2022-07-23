@@ -105,6 +105,11 @@ small {
   font-size: 14px;
 }
 
+.d-flex .active {
+  color: black;
+  cursor: default;
+}
+
 footer {
   text-align: center;
   margin-top: 25px;
