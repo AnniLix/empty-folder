@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
@@ -70,93 +73,17 @@
         </div>
       </div>
       <br />
-      <h6>
-        5 DAY FORECAST📅
-      </h6>
-      <div class="row">
-        <div class="col">
-          <div class="card otherDays">
-            <h5>
-              Thursday
-            </h5>
-            <div class="d-flex">
-              <img src="imgs/cloud.png" alt="sun" class="weather-icon float-left" id="icon2" width="30" height="30" />
-              <div class="col4">
-                20°C
-                <br />
-                16°C
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card otherDays">
-            <h5>
-              Friday
-            </h5>
-            <div class="d-flex">
-              <img src="imgs/sun.png" alt="sun" class="weather-icon float-left" id="icon3" width="30" height="30" />
-              <div class="col4">
-                26°C
-                <br />
-                21°C
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card otherDays">
-            <h5>
-              Saturday
-            </h5>
-            <div class="d-flex">
-              <img src="imgs/suncloud.png" alt="suncloud" class="weather-icon float-left" id="icon4" width="30"
-                height="30" />
-              <div class="col4">
-                21°C
-                <br />
-                18°C
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card otherDays">
-            <h5>
-              Sunday
-            </h5>
-            <div class="d-flex">
-              <img src="imgs/rain.png" alt="rain" class="weather-icon float-left" width="30" id="icon5" height="30" />
-              <div class="col4">
-                22°C
-                <br />
-                17°C
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card otherDays">
-            <h5>
-              Monday
-            </h5>
-            <div class="d-flex">
-              <img src="imgs/sun.png" alt="sun" class="weather-icon float-left" id="icon6" width="30" height="30" />
-              <div class="col4">
-                24°C
-                <br />
-                20°C
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <span class="sixDayForecast">
+        6 DAY FORECAST📅
+      </span>
+      <div id="forecast"></div>
       <footer>Coded by Anni Lix</footer>
     </div>
     <small class="small">
       <a href="https://github.com/AnniLix/empty-folder" target="_blank" class="source">Open-source code</a>,
       by Anni Lix
     </small>
+  </div>
   </div>
 
   <script src="src/homework.js"></script>

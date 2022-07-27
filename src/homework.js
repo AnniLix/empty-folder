@@ -25,6 +25,38 @@ let now = new Date();
 let currentTime = document.querySelector('#date');
 currentTime.innerHTML = currentDate(now);
 
+function displayForecast() {
+  let forecastElement = document.querySelector('#forecast');
+  let forecastHtml = `<div class="row">`;
+  let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+        <div class="col-2">
+          <div class="card otherDays">${day}
+            <div class="d-flex">
+              <img src="imgs/cloud.png" alt="sun" class="weather-icon float-left" id="icon2" width="30" height="30" />
+              <div class="col4">
+                20°C
+                <br />
+                16°C
+              </div>
+            </div>
+          </div>
+          </div>`;
+  });
+
+  forecastHtml = forecastHtml + `</div>`;
+  forecastElement.innerHTML = forecastHtml;
+}
+
+function getForecast(coordinates) {
+  let apiKey = 'dc4867c7e70cb097c34a05c3fcfb260d';
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function showWeather(response) {
   document.querySelector('.region').innerHTML = response.data.name;
   document.querySelector('#temperature').innerHTML = Math.round(
@@ -43,6 +75,8 @@ function showWeather(response) {
       'src',
       `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
+
+  getForecast(response.data.coord);
 }
 
 function handleSubmit(event) {
