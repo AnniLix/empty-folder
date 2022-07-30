@@ -25,26 +25,49 @@ let now = new Date();
 let currentTime = document.querySelector('#date');
 currentTime.innerHTML = currentDate(now);
 
-function displayForecast() {
+function formatDay(timestemp) {
+  let date = new Date(timestemp * 1000);
+  let day = date.getDay();
+  let days = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+  ];
+
+  return days[day];
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector('#forecast');
   let forecastHtml = `<div class="row">`;
-  let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHtml =
+        forecastHtml +
+        `
         <div class="col-2">
-          <div class="card otherDays">${day}
+          <div class="card otherDays">${formatDay(forecastDay.dt)}
             <div class="d-flex">
-              <img src="imgs/cloud.png" alt="sun" class="weather-icon float-left" id="icon2" width="30" height="30" />
+              <img src="https://openweathermap.org/img/wn/${
+                forecastDay.weather[0].icon
+              }@2x.png"
+              height="40"
+              width="40" />
               <div class="col4">
-                20°C
+                ${Math.round(forecastDay.temp.max)}°C
                 <br />
-                16°C
+                ${Math.round(forecastDay.temp.min)}°C
               </div>
             </div>
           </div>
           </div>`;
+    }
   });
 
   forecastHtml = forecastHtml + `</div>`;

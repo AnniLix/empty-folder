@@ -1,18 +1,14 @@
-body {
+.body {
   font-family: "Dosis", sans-serif;
   margin: 0;
-  background: linear-gradient(
-    0deg,
-    rgb(247, 247, 247) 23.8%,
-    rgb(252, 221, 221) 92%
-  );
+  background-image: url(https://georgiatoday.ge/wp-content/uploads/2021/07/sunshine_36366417_ver1.0-8.jpg);
+  background-size: 100%;
 }
-
 h1 {
   font-size: 33px;
   margin-top: 10px;
   margin-bottom: 0;
-  color: #fa5981;
+  color: #12643e;
 }
 
 ul {
@@ -29,9 +25,14 @@ a {
   color: black;
 }
 
+.mainTemp {
+  font-size: larger;
+}
+
 .otherDays {
   text-align: center;
-  color: #fc658b;
+  font-size: large;
+  color: #105837;
 }
 
 .sixDayForecast,
@@ -44,11 +45,13 @@ col {
 
 .small {
   text-align: center;
+  font-size: 14px;
   margin-left: 310px;
 }
 
 .sky {
   font-size: 20px;
+  margin-top: -5px;
 }
 
 .d-flex {
@@ -62,19 +65,20 @@ col {
 .col2 {
   font-size: 33px;
   font-weight: 500;
-  color: #fc658b;
+  color: #105837;
 }
 
 .col-3 {
   text-align: center;
-  color: #fd4573;
+  font-size: large;
+  color: #105837;
   padding: 0;
   max-width: 90px;
   margin: 0 5px;
 }
 
 .col-3:hover {
-  background: #ffecf1;
+  background: #fff;
   transition: all 200ms ease-in-out;
 }
 
@@ -91,22 +95,31 @@ col {
 .weatherApp {
   display: block;
   margin: 20px 310px;
+  margin-bottom: 10px;
   padding: 20px;
-  border: 2px solid#FF85A3;
-  background: white;
+  background: radial-gradient(
+    592px at 48.2% 50%,
+    rgba(255, 255, 249, 0.6) 0%,
+    rgb(160, 199, 254) 74.6%
+  );
+  border: 2px solid #4049aa;
   max-width: 700px;
   border-radius: 5px;
 }
 
 .weather-icon {
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
   margin-top: 10px;
 }
 
 .source {
-  color: #007bff;
+  color: #f3f6f9;
   font-size: 14px;
+}
+
+.source:hover {
+  color: black;
 }
 
 .d-flex .active {
